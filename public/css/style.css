@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300&family=Open+Sans:wght@300;400;600;800&display=swap');
+
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color:var(--accent); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    border-radius:30px;
+  }
+  
+  #myBtn:hover {
+    background-color:var(--font-color); /* Add a dark-grey background on hover */
+  }
+
+
+:root{
+    --background-color: #fafff5;
+    --font-color:#302e26;
+    --accent:#eb6543;
+    
+}
+.logo{
+    font-size:2rem;
+    color: var(--font-color);
+}
+.logo span{
+    color: var(--accent);
+    font-family: 'Athiti', sans-serif;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.6% 8%;
+     z-index:999;
+  box-shadow: 0px 0px 10px gray;
+  display: flex;
+  background-color: var(--background-color);
+  position:fixed;
+  top:0;
+  left: 0;
+}
+
+main{
+    margin-top:9%;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--font-color);
+    font-size:1.5rem;
+    margin-left:10px;
+    font-family: 'Athiti', sans-serif;
+    padding:8px 30px;
+    border-radius:30px;
+}
+nav ul li a:hover{
+    background-color: var(--accent);
+    color: var(--background-color);
+}
+
+.blog-nav{
+    border:1px solid var(--accent);
+    color: var(--font-color);
+
+}
+
+.bar{
+ font-size:2.2rem;
+ display: none;
+   }
+
+
+
+.container{
+    padding:1.6% 8%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+   .txt-container{
+    width: 50%;
+   }
+
+   .img-container{
+    width:50%;
+   }
+
+   .img-container img{
+    max-width: 100%;
+    border:5px dashed var(--accent);
+    border-radius:50%;
+   }
+
+   .txt-container h1{
+    color: var(--accent);
+    font-size:3.8rem;
+   } 
+
+   .txt-container p{
+    font-size:1.4rem;
+    line-height:2;
+   }
+
+   .name{
+    font-size:3rem;
+    color: var(--accent);
+    color: var(--font-color);
+   }
+
+   .btn{
+    display: block;
+    border:1px solid var(--accent);
+    width:fit-content;
+    padding:8px 25px;
+    font-size:1.2rem;
+    color: var(--font-color);
+    border-radius:30px;
+    text-align: center;
+    margin-top:10px;
+   }
+
+   .btn:hover{
+    background-color: var(--accent);
+    margin-top:15px;
+   }
+
+   p{
+    color: var(--font-color);
+    font-size:1.2rem;
+    opacity:.9;
+   }
+
+   section{
+    margin-bottom:5%;
+
+   }
+
+   h2{
+    text-align: center;
+    font-size:2.4rem;
+    margin-bottom:2%;
+   }
+
+
+   .container-me{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:1.6% 8%;
+   }
+
+   .img-container-me img{
+    max-width: 80%;
+    border:5px dashed var(--accent);
+    border-radius:50%;
+   }
+
+   .cards{
+    display: flex;
+    gap:2%;
+    align-items: center;
+    justify-content: center;
+    padding:1.6% 8%;
+   }
+
+   .card-container{
+    width:300px;
+    height:200px;
+    padding:1% 3%;
+    background-color: var(--font-color);
+    
+   }
+
+  
+.text p{
+    color: var(--background-color);
+}
+   .text{
+    
+    padding:20px;
+   }
+
+   .text h4{
+    color: var(--accent);
+   }
+   .text a{
+    color: var(--accent);
+    padding:5px 0px;
+   }
+
+   .form-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding:1.6% 8%;
+    width: 100%;
+    justify-content: center;
+   }
+
+   form{
+    display: block;
+    width:70%;
+   }
+
+
+   label{
+    display:block;
+    font-size:1.5rem;
+    opacity: .8;
+   }
+
+   input{
+    font-size:1.3rem;
+    display: block;
+    width:100%;
+    height:50px;
+    margin-bottom:10px;
+   
+   }
+
+   textarea{
+    display: block;
+    width:100%;
+    font-size: 1.3rem;
+    margin-bottom:10px;
+   }
+
+
+   input[type=submit]{
+    margin-top:5%;
+     outline: none;
+    background: transparent;
+    border-radius: 30px;
+    font-size:1.5rem;
+    border:1px solid var(--accent);
+    text-align: center;
+   }
+
+   input[type=submit]:hover{
+    background-color: var(--accent);
+    color: var(--background-color);
+    transition: 1s ease-in-out;
+   }
+
+   footer{
+    width:100%;
+    text-align: center;
+   }
+
+   footer a{
+    text-decoration: none;
+    color: var(--accent);
+    font-size:3rem;
+    margin-right:10px;
+   }
+
+   @media(max-width:768px) {
+    nav{
+      display:block;
+      position: relative;
+    }
+   nav ul{
+      display:none;
+      width:100%;
+   }
+   nav ul li a{
+    display: block;
+    text-align: center;
+   }
+    .bar{
+      display: block;
+      position: absolute;
+      right:7%;
+      top:5%;
+      font-size:40px;
+    }
+    .container{
+      padding:20px 30px;
+      display: flex;
+      justify-content: center;
+      flex-direction:column-reverse;
+      align-items:center;
+  }
+
+  .txt-container h1{
+    color: var(--accent);
+    font-size:3rem;
+    text-align: center;
+   } 
+
+   .txt-container p{
+    font-size:1.2rem;
+    text-align: center;
+   }
+
+   .name{
+    font-size:1.8rem;
+    color: var(--accent);
+    color: var(--font-color);
+    text-align: center;
+   }
+   .btn{
+    display: block;
+    margin:10px auto;
+    width:100%;
+   }
+   .img-container{
+    width: 100%;
+   }
+   .txt-container{
+    width:100%;
+   }
+
+   .container-me{
+    flex-direction: column;
+   }
+
+   .img-container-me{
+    width:100%;
+   }
+
+   .img-container-me img{
+    max-width:100%;
+   }
+   .cards{
+    flex-direction: column;
+    
+   }
+   .card-container{
+    margin-bottom:5%;
+   }
+
+}
