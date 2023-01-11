@@ -10,7 +10,7 @@ const getData = async (req,res)=>{
             message: req.body.message
         })
         const result = await viewers.save();
-        res.send('Saved sucessfullly')
+        res.redirect('index');
     } catch (error) {
         res.send(error.message)
     }
