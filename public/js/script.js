@@ -30,3 +30,28 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+const quote = document.querySelector('.quote');
+const author = document.querySelector('.author');
+
+
+function randomgen() {
+    const random = Math.floor(Math.random() * 100)
+    return random
+}
+Object.onload = api()
+async function api (){
+   await fetch('https://type.fit/api/quotes').then((response) => response.json())
+        .then((data) => {
+            const num = randomgen()
+            for (let i = 0; i < data.length; i++) {
+
+                quote.textContent =  "\""+data[num].text+"\"" 
+                author.textContent ='-'+" "+data[num].author
+
+            }
+
+        }
+        );
+}
