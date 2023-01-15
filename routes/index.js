@@ -1,15 +1,32 @@
 const express = require("express");
+const request = require('request')
 const user = require("../controllers/userDetails");
 
 const router = express.Router();
 router.get("/", (req, res) => {
-  // const request = require('request');
-  // request('https://api.openweathermap.org/data/2.5/weather?q=tulsipur&appid=08db2d8dd768dc49371df1ce694ce160&units=metric', function (error, response, body) {
-  //  if(response.statusCode===200){
-  //     const data = JSON.parse(body)
-  //     const temperature=data.main.temp
-  res.render("index");
+ res.render('index')
 });
+
+router.get('/articles',(req,res)=>{
+  const userAgent = req.get('user-agent')
+  request('https://newsapi.org/v2/everything?q=world&apiKey=e364de34bff342df93310e304e07b708',{ headers: {
+    'User-Agent': userAgent
+  }},(err,request,response)=>{
+    if(err){
+      console.log(err)
+      res.redirect('/')
+    }else{
+      // console.log(response)
+      const body = JSON.parse(response)
+      const articlesArr = body.articles
+   
+      res.render('articles',{
+        articles:articlesArr
+      })
+      // res.render('index')
+    }
+  })
+})
 
 router.get('*',(req,res)=>{
     res.render('404')

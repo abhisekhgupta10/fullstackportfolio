@@ -26,5 +26,4 @@ app.listen(PORT, () => {
   console.log(`Server running in node on port ${PORT}`);
 });
 
-//  08db2d8dd768dc49371df1ce694ce160
-// https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
